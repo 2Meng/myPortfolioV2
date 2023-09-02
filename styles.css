@@ -10,6 +10,9 @@ nav {
   align-items: center;
   min-height: 8vh;
   background-color: rgb(95, 93, 91);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -45,6 +48,169 @@ nav {
   margin: 5px;
 }
 
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: transform 0.3s ease;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: transform 0.3s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main #about {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  height: 100vh;
+}
+
+main #about h2 {
+  font-size: 3em;
+  padding-bottom: 100px;
+}
+
+main #about p {
+  font-size: 25px;
+  margin-bottom: 100px;
+}
+
+main #projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200vh;
+}
+
+main #projects h2 {
+  margin-top: 100px;
+}
+
+main .project1,
+main .project2,
+main .project3 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .project1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+main .project1 section {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-right: 40vh;
+}
+
+main .project1 section div {
+  margin: 5px;
+}
+
+main .project1 section div li {
+  list-style: none;
+}
+
+main .project1 img {
+  padding-right: 100px;
+}
+
+main .project2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+main .project2 section {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-right: 40vh;
+}
+
+main .project2 section div {
+  margin: 5px;
+}
+
+main .project2 section div li {
+  list-style: none;
+}
+
+main .project2 img {
+  padding-right: 100px;
+}
+
+main .project3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+main .project3 section {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-right: 40vh;
+}
+
+main .project3 section div {
+  margin: 5px;
+}
+
+main .project3 section div li {
+  list-style: none;
+}
+
+main .project3 img {
+  padding-right: 100px;
+}
+
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -54,7 +220,8 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: black;
+    width: 20%;
+    background-color: rgb(95, 93, 91);
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
@@ -62,12 +229,9 @@ nav {
   }
   .nav-links li {
     opacity: 0;
+    margin-bottom: 15px;
   }
   .burger {
     display: block;
   }
-}
-
-.nav-active {
-  transform: translateX(0%);
 }
