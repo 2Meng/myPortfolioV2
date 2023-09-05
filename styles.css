@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -82,6 +83,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 
 main section {
@@ -117,7 +119,7 @@ main #projects {
 }
 
 main #projects h2 {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 main .project1,
@@ -209,6 +211,127 @@ main .project3 section div li {
 
 main .project3 img {
   padding-right: 100px;
+}
+
+main #experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 200px;
+}
+
+main #experience div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 50px;
+}
+
+main #experience div h3 {
+  margin-bottom: 20px;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#contact .container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90th;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #f0ecec;
+}
+
+#contact .container form h2,
+p {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#contact .container form input,
+form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: rgb(204, 203, 203);
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  background: #ff5361;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
+
+.dark {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }
 
 @media screen and (max-width: 768px) {

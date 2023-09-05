@@ -1,6 +1,10 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
+const contactFormBtn = document.getElementById("submit-form");
+const checkbox = document.querySelector(".checkbox");
+const mainPage = document.querySelector(".main-page");
+const contact = document.getElementById("contact");
 
 burger.addEventListener("click", () => {
   // Toggles navbar
@@ -17,11 +21,8 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("toggle");
 });
 
-function removeEveryOther(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.includes("Remove")) {
-      arr.splice(arr, 2);
-    }
-  }
-}
-console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]));
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+
+  contact.style.color = "black";
+});

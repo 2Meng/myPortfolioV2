@@ -16,6 +16,14 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
+            <div>
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <label for="checkbox" class="checkbox-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+              </label>
+            </div>
           </ul>
         </section>
         <section class="burger">
@@ -25,7 +33,7 @@
         </section>
       </nav>
     </header>
-    <main>
+    <main class="main-page">
       <section id="about">
         <h2>Toumeng</h2>
         <p>
@@ -95,15 +103,13 @@
 
             <div>
               <h3>Challenges</h3>
-              <ul>
-                <li>
-                  We had a couple of challenges that stumped us through out this
-                  project. One of them being a challenge to understand how
-                  Tetris logic. Through this project I learned a lot about how
-                  much you can do with arrays and loops!
-                </li>
-                <li>Another challenge that stumped us was routing.</li>
-              </ul>
+              <p>
+                We had a couple of challenges that stumped us through out this
+                project. One of them being a challenge to understand how Tetris
+                logic. Through this project I learned a lot about how much you
+                can do with arrays and loops!
+              </p>
+              <p>Another challenge that stumped us was routing.</p>
             </div>
 
             <div>
@@ -145,15 +151,13 @@
 
             <div>
               <h3>Challenges</h3>
-              <ul>
-                <li>
-                  One of the biggest challenge on this project we had was with
-                  JSON web-tokens.. Since this application requires that users
-                  log into the website before interacting with it.. It created a
-                  barrier towards the end where we had trouble getting valid
-                  tokens to create accounts and login.
-                </li>
-              </ul>
+              <p>
+                One of the biggest challenge on this project we had was with
+                JSON web-tokens.. Since this application requires that users log
+                into the website before interacting with it.. It created a
+                barrier towards the end where we had trouble getting valid
+                tokens to create accounts and login.
+              </p>
             </div>
 
             <div>
@@ -174,9 +178,11 @@
               </ul>
             </div>
           </section>
+
           <img src="/imgs/flowertetris.png" alt="" />
         </section>
       </section>
+
       <section id="experience">
         <h2>Work Experience</h2>
         <p>Here is a brief look at my work history!</p>
@@ -195,6 +201,7 @@
             </li>
           </ul>
         </div>
+
         <div>
           <h3>
             Loan Document Processor - Wells Fargo - Minneapolis, MN - June 2019
@@ -224,30 +231,96 @@
             </li>
           </ul>
         </div>
+
         <div>
-          <h3></h3>
+          <h3>
+            Front end - Cub Foods - Minneapolis, MN - July 2022 - September 2022
+          </h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              Customer Service Manager - Managed team and ensured customer
+              satisfaction
+            </li>
+            <li>
+              Customer service desk - Assisted customers with sending and
+              receiving MoneyGram, making money orders and lottery sales.
+            </li>
+            <li>
+              Customer service bookkeeping - Balanced Moneygram, MoneyOrder, and
+              lottery sales.
+            </li>
+            <li>
+              Online order fulfillment - Completed customer orders placed online
+            </li>
+            <li>
+              Self check-out - Managed self checkout lanes, assisted customers
+              with self checkout and also ensured customers were not committing
+              theft.
+            </li>
           </ul>
         </div>
+
         <div>
-          <h3></h3>
+          <h3>
+            Mortgage/Auto document - Masterson/Wells Fargo - Eagan, MN -
+            December 2018 - May 2019
+          </h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Receive shipments of loan documents from dealerships.</li>
+            <li>
+              Processed, scanned and indexed documents to a shared system to be
+              viewed during the closing funding process.
+            </li>
+            <li>
+              Processed mortgage documents to be sent to physical storage as a
+              secondary function.
+            </li>
           </ul>
         </div>
       </section>
+
       <section id="contact">
-        <h2>Contact me!</h2>
-        <p>All forms will be sent directly to my email!</p>
+        <div class="container">
+          <form
+            action="https://formspree.io/f/mbjvyyar"
+            method="POST"
+            target="_blank"
+          >
+            <h2>Contact me!</h2>
+            <p>All forms will be sent directly to my email!</p>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+              required
+            />
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Your message"
+            ></textarea>
+            <button id="submit-form">Send</button>
+          </form>
+        </div>
       </section>
     </main>
+
     <footer>
       <ul>
         <li><a href="">LinkedIn</a></li>
@@ -256,6 +329,8 @@
       </ul>
       <a href="#">Back to the top!</a>
     </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
